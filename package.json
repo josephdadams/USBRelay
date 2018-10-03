@@ -1,0 +1,13 @@
+{
+  "name": "USBRelay",
+  "version": "1.0.0",
+  "description": "Control USB HID Relays from NodeJS.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Joseph Adams",
+  "license": "MIT",
+  "dependencies": {
+    "node-hid": "^0.7.3"
+  },
+  "repository": "http://www.github.com/josephdadams/USBRelay"
+}
