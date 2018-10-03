@@ -1,7 +1,9 @@
 USB Relay
 =============
 
-Control simple USB HID Relays using Node JS.
+Control simple USB HID Relays using Node JS like this one:
+
+![picture alt](https://github.com/josephdadams/USBRelay/raw/master/usbrelay.jpg "USB Relay")
 
 To use:
 
