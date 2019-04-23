@@ -5,10 +5,16 @@ Control simple USB HID Relays using Node JS like this one:
 
 ![picture alt](https://github.com/josephdadams/USBRelay/raw/master/usbrelay.jpg "USB Relay")
 
-To use:
+### To install
+
+```bash
+npm i @josephdadams/usbrelay
+```
+
+### To use:
 
 ```javascript
-const USBRelay = require("./USBRelay.js");
+const USBRelay = require("@josephdadams/usbrelay");
 const relay = new USBRelay(); //gets the first connected relay
 ```
 
@@ -21,7 +27,7 @@ const relay = new USBRelay(path);
 Get connected relays:
 
 ```javascript
-relay.Relays(); //returns an array with HID data including paths
+USBRelay.Relays; //returns an array with HID data including paths
 ```
 
 Set relay state:
