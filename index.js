@@ -86,6 +86,28 @@ class USBRelay
 
         this.device.sendFeatureReport(command);
     }   
+
+    getState(relayNumber)
+    {
+        let relayIndex = relayNumber-1;
+        if(relayIndex<0 || relayIndex>7){
+            throw new Error('Invalid relayNumber must be between 1 and 8');
+        }
+        let report = this.device.getFeatureReport(0,9);
+        
+        return ((report[8]>>relayIndex)&1)==1;
+    }
+
+    getSerialNumber()
+    {
+        let report = this.device.getFeatureReport(0,9);
+        let serial = new Array(5);
+        for(let i=0;i<5;i++){
+            serial[i]=String.fromCharCode( report[i+1] );
+        }
+        
+        return serial.join("");
+    }
 }
 
 module.exports = USBRelay;
