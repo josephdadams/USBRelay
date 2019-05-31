@@ -17,6 +17,14 @@ class USBRelay
         const connectedRelays = devices.filter(device => {
                 return device.product.indexOf("USBRelay") !== -1;
         });
+        connectedRelays.forEach(device=>{
+            try{
+                device.serial = new USBRelay(device.path).getSerialNumber();
+            }
+            catch(e){
+                device.serial = "";
+            }
+        });
         return connectedRelays;
     }
         
