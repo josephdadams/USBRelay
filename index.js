@@ -18,7 +18,12 @@ class USBRelay
                 return device.product.indexOf("USBRelay") !== -1;
         });
         connectedRelays.forEach(device=>{
-            device.serial = new USBRelay(device.path).getSerialNumber();
+            try{
+                device.serial = new USBRelay(device.path).getSerialNumber();
+            }
+            catch(e){
+                device.serial = "";
+            }
         });
         return connectedRelays;
     }
