@@ -15,7 +15,7 @@ class USBRelay
     {
         const devices = HID.devices();
         const connectedRelays = devices.filter(device => {
-                return device.product.indexOf("USBRelay") !== -1;
+                return device.product && device.product.indexOf("USBRelay") !== -1;
         });
         connectedRelays.forEach(device=>{
             try{
