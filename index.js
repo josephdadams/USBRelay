@@ -15,7 +15,7 @@ class USBRelay
     {
         const devices = HID.devices();
         const connectedRelays = devices.filter(device => {
-                return device.product && device.product.indexOf("USBRelay") !== -1;
+            return device.product && device.product.indexOf("USBRelay") !== -1;
         });
         connectedRelays.forEach(device=>{
             try{
@@ -35,10 +35,10 @@ class USBRelay
                 // Device path was not provided, so let's select the first connected device.
                 const devices = HID.devices();
                 const connectedRelays = devices.filter(device => {
-                        return device.product && device.product.indexOf("USBRelay") !== -1;
+                    return device.product && device.product.indexOf("USBRelay") !== -1;
                 });
                 if (!connectedRelays.length) {
-                        throw new Error('No USB Relays are connected.');
+                    throw new Error('No USB Relays are connected.');
                 }
                 this.device = new HID.HID(connectedRelays[0].path);
         }
