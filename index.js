@@ -34,7 +34,6 @@ class USBRelay
         {
                 // Device path was not provided, so let's select the first connected device.
                 const devices = HID.devices();
-                console.log(devices);
                 const connectedRelays = devices.filter(device => {
                     return device.product && device.product.indexOf("USBRelay") !== -1;
                 });
