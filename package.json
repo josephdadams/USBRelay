@@ -7,7 +7,17 @@
   "author": "Joseph Adams",
   "license": "MIT",
   "dependencies": {
-    "node-hid": "^0.7.3"
+    "node-hid": "^2.1.1"
   },
-  "repository": "http://www.github.com/josephdadams/USBRelay"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josephdadams/USBRelay.git"
+  },
+  "bugs": {
+    "url": "https://github.com/josephdadams/USBRelay/issues"
+  },
+  "homepage": "https://github.com/josephdadams/USBRelay#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
